@@ -21,17 +21,16 @@ namespace Helbiz.Infrastructure
             return services;
         }
 
-        public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder app)
+        public static void UseInfrastructure(this IApplicationBuilder app)
         {
             var serviceProvide = app.ApplicationServices;
             using var serviceScope = serviceProvide.CreateScope();
             var context = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
             context.Database.Migrate();
-            InitializeUser(context);
-            return app;
+            if (!context.Users.Any()) SeedUser(context);
         }
 
-        private static void InitializeUser(ApplicationDbContext context)
+        private static void SeedUser(ApplicationDbContext context)
         {
             var initialUser = new User()
             {
