@@ -1,8 +1,42 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3D374C78-32E6-4542-8A14-EB39AF504DB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helbiz.Api", "src\Helbiz.Api\Helbiz.Api.csproj", "{9ECDCEFA-C9A7-4387-92C7-2B4FF004879D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helbiz.Application", "src\Helbiz.Application\Helbiz.Application.csproj", "{28C8036E-33EE-4392-B2CA-CD0563E8D21A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helbiz.Infrastructure", "src\Helbiz.Infrastructure\Helbiz.Infrastructure.csproj", "{3A10639E-D9C0-434A-AB5C-255139640E13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helbiz.Domain", "src\Helbiz.Domain\Helbiz.Domain.csproj", "{CD33F45F-8FF9-4E3F-81A2-E4F6AA40B384}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9ECDCEFA-C9A7-4387-92C7-2B4FF004879D} = {3D374C78-32E6-4542-8A14-EB39AF504DB9}
+		{28C8036E-33EE-4392-B2CA-CD0563E8D21A} = {3D374C78-32E6-4542-8A14-EB39AF504DB9}
+		{3A10639E-D9C0-434A-AB5C-255139640E13} = {3D374C78-32E6-4542-8A14-EB39AF504DB9}
+		{CD33F45F-8FF9-4E3F-81A2-E4F6AA40B384} = {3D374C78-32E6-4542-8A14-EB39AF504DB9}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9ECDCEFA-C9A7-4387-92C7-2B4FF004879D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ECDCEFA-C9A7-4387-92C7-2B4FF004879D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ECDCEFA-C9A7-4387-92C7-2B4FF004879D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ECDCEFA-C9A7-4387-92C7-2B4FF004879D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28C8036E-33EE-4392-B2CA-CD0563E8D21A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C8036E-33EE-4392-B2CA-CD0563E8D21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C8036E-33EE-4392-B2CA-CD0563E8D21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C8036E-33EE-4392-B2CA-CD0563E8D21A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A10639E-D9C0-434A-AB5C-255139640E13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A10639E-D9C0-434A-AB5C-255139640E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A10639E-D9C0-434A-AB5C-255139640E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A10639E-D9C0-434A-AB5C-255139640E13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD33F45F-8FF9-4E3F-81A2-E4F6AA40B384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD33F45F-8FF9-4E3F-81A2-E4F6AA40B384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD33F45F-8FF9-4E3F-81A2-E4F6AA40B384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD33F45F-8FF9-4E3F-81A2-E4F6AA40B384}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
