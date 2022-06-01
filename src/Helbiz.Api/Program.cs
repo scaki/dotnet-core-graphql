@@ -1,8 +1,9 @@
+using Helbiz.Application;
 using Helbiz.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration).AddApplication();
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
