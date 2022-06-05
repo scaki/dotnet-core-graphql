@@ -8,11 +8,21 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="HotChocolate" Version="12.9.0" />
+        <PackageReference Include="HotChocolate.AspNetCore" Version="12.9.0" />
+        <PackageReference Include="HotChocolate.AspNetCore.Playground" Version="10.5.5" />
+        <PackageReference Include="HotChocolate.Types" Version="12.9.0" />
+        <PackageReference Include="HotChocolate.Types.Filters" Version="12.9.0" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.5" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Controllers" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Helbiz.Application\Helbiz.Application.csproj" />
       <ProjectReference Include="..\Helbiz.Infrastructure\Helbiz.Infrastructure.csproj" />
     </ItemGroup>
 

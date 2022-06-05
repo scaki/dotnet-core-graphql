@@ -16,11 +16,6 @@ namespace Helbiz.Infrastructure.Repositories
             DbSet = Context.Set<TEntity>();
         }
 
-        protected BaseRepository()
-        {
-            throw new NotImplementedException();
-        }
-
         public virtual async Task<IEnumerable<TEntity>> GetAsync()
         {
             return await DbSet.ToListAsync();

@@ -15,5 +15,14 @@ namespace Helbiz.Infrastructure.Repositories
         {
             return Context.Users.FirstOrDefaultAsync(x => x.Username == username);
         }
+        public User? GetUserByUsername(string username)
+        {
+            return Context.Users.FirstOrDefault(x => x.Username == username);
+        }
+
+        public IQueryable<User> GetUsersQueryable()
+        {
+            return Context.Users.AsQueryable();
+        }
     }
 }

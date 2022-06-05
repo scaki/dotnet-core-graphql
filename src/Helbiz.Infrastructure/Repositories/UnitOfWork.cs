@@ -1,5 +1,6 @@
 ﻿using Helbiz.Application.Interfaces.Repositories;
 using Helbiz.Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Helbiz.Infrastructure.Repositories;
 
@@ -10,7 +11,7 @@ public class UnitOfWork : IUnitOfWork
     public UnitOfWork(ApplicationDbContext context)
     {
         this._context = context;
-    }
+     }
 
     private bool _disposed = false;
     private UserRepository _userRepository;
