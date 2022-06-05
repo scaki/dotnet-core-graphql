@@ -1,6 +1,6 @@
 ﻿namespace Helbiz.Application.Dtos.Auth;
 
-public class PostLoginInputPayload
+public class LoginInputPayload
 {
     public string Username { get; set; }
     public string Password { get; set; }

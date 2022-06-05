@@ -2,7 +2,7 @@
 
 namespace Helbiz.Application.Models;
 
-public class ItemModel
+public class ItemListModel
 {
     [JsonProperty("last_updated")]
     public long LastUpdated { get; set; }
@@ -22,6 +22,6 @@ public class ItemModel
 
 public partial class Data
 {
-    [JsonProperty("bike")]
-    public Bike? Bike { get; set; }
+    [JsonProperty("bikes")]
+    public List<Bike?> Bikes { get; set; }
 }

@@ -16,10 +16,10 @@ public class AuthService : IAuthService
         _jwtHelper = jwtHelper;
     }
 
-    public async Task<PostLoginOutputPayload> Login(PostLoginInputPayload model)
+    public async Task<LoginOutputPayload> Login(LoginInputPayload model)
     {
         var user = await _unitOfWork.User.GetUserByUsernameAsync(model.Username);
-        var result = new PostLoginOutputPayload();
+        var result = new LoginOutputPayload();
         if (user == null) return result;
         var verifiedPassword = BCrypt.Net.BCrypt.Verify(model.Password, user.Password);
         if (verifiedPassword)

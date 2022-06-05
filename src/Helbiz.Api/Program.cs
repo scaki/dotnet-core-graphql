@@ -5,7 +5,6 @@ using HotChocolate.AspNetCore;
 using HotChocolate.AspNetCore.Playground;
 
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddInfrastructure(builder.Configuration).AddApplication();
 builder.Services.AddControllers();
 builder.Services.AddGraphQLServer().AddQueryType<Query>().AddMutationType<Mutation>();
@@ -21,6 +20,9 @@ if (app.Environment.IsDevelopment())
     app.UsePlayground(new PlaygroundOptions() {QueryPath = "/gql", Path = "/playground"});
 }
 
+app.UseCors(
+    options => options.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()
+);
 app.UseInfrastructure();
 app.MapGraphQL("/gql");
 app.UseHttpsRedirection();

@@ -4,5 +4,5 @@ namespace Helbiz.Application.Interfaces.Services;
 
 public interface IAuthService
 {
-    Task<PostLoginOutputPayload> Login(PostLoginInputPayload model);
+    Task<LoginOutputPayload> Login(LoginInputPayload model);
 }

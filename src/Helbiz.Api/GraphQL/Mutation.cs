@@ -6,7 +6,7 @@ namespace Helbiz.Api.GraphQL;
 
 public class Mutation
 {
-    public async Task<PostLoginOutputPayload> Login([Service] IAuthService _authService, PostLoginInputPayload payload)
+    public async Task<LoginOutputPayload> Login([Service] IAuthService _authService, LoginInputPayload payload)
     {
         return await _authService.Login(payload);
     }
